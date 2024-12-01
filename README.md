@@ -1,40 +1,36 @@
-# Scoop Bucket Template
+<div align="center">
+    <h1 align="center">🎐Zephyr</h1>
+    <p align="center">
+        <a href="https://github.com/Hezric/scoop-zephyr/actions/workflows/ci.yml"><img src="https://github.com/Hezric/scoop-zephyr/actions/workflows/ci.yml/badge.svg" alt="GitHub Actions CI Status"></a>
+        <a href="https://github.com/Hezric/scoop-zephyr/actions/workflows/excavator.yml"><img src="https://github.com/Hezric/scoop-zephyr/actions/workflows/excavator.yml/badge.svg" alt="License"></a>
+        <a href="https://www.microsoft.com/en-us/windows"><img src="https://img.shields.io/badge/Target-Windows%2011-0067B8.svg" alt="Powered by Saber" /></a>
+    </p>
+    <p align="center">
+        A <a href="https://github.com/lukesampson/scoop/wiki/Buckets"><code>bucket</code></a> for <a href="https://github.com/lukesampson/scoop">Scoop</a>, providing lightweight, refined tools for seamless workflows.
+    </p>
+</div>
 
-<!-- Uncomment the following line after replacing placeholders -->
-[![Tests](https://github.com/Hezric/scoop-zephyr/actions/workflows/ci.yml/badge.svg)](https://github.com/Hezric/scoop-zephyr/actions/workflows/ci.yml) [![Excavator](https://github.com/Hezric/scoop-zephyr/actions/workflows/excavator.yml/badge.svg)](https://github.com/Hezric/scoop-zephyr/actions/workflows/excavator.yml)
+## Apps
 
-Template bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
+| Manifest   | Description                                                            |
+| ---------- | ---------------------------------------------------------------------- |
+| AutoHotkey | Install `Ahk2Exe` by default and set `AHK_HOME` to the root directory. |
 
-## How do I use this template?
+## How to install the apps from this bucket?
 
-1. Generate your own copy of this repository with the "Use this template"
-   button.
-2. Allow all GitHub Actions:
-   - Navigate to `Settings` - `Actions` - `General` - `Actions permissions`.
-   - Select `Allow all actions and reusable workflows`.
-   - Then `Save`.
-3. Allow writing to the repository from within GitHub Actions:
-   - Navigate to `Settings` - `Actions` - `General` - `Workflow permissions`.
-   - Select `Read and write permissions`.
-   - Then `Save`.
-4. Document the bucket in `README.md`.
-5. Replace the placeholder repository string in `bin/auto-pr.ps1`.
-6. Create new manifests by copying `bucket/app-name.json.template` to
-   `bucket/<app-name>.json`.
-7. Commit and push changes.
-8. If you'd like your bucket to be indexed on `https://scoop.sh`, add the
-   topic `scoop-bucket` to your repository.
-
-## How do I install these manifests?
-
-After manifests have been committed and pushed, run the following:
+Run below command in PowerShell to add the bucket:
 
 ```pwsh
 scoop bucket add zephyr https://github.com/Hezric/scoop-zephyr
-scoop install zephyr/<manifestname>
 ```
 
-## How do I contribute new manifests?
+Install apps from this bucket with below command:
+
+```pwsh
+scoop install zephyr/<app_name>
+```
+
+## How do I contribute new apps?
 
 To make a new manifest contribution, please read the [Contributing
 Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md)

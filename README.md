@@ -5,6 +5,7 @@
         <a href="https://github.com/Hezric/scoop-zephyr/actions/workflows/excavator.yml"><img src="https://github.com/Hezric/scoop-zephyr/actions/workflows/excavator.yml/badge.svg" alt="License"></a>
         <a href="https://www.microsoft.com/en-us/windows"><img src="https://img.shields.io/badge/Target-Windows%2011-0067B8.svg" alt="Powered by Saber" /></a>
     </p>
+    <p align="center">English | <a href="README_zh-Hans.md">简体中文</a></p>
     <p align="center">
         A <a href="https://github.com/lukesampson/scoop/wiki/Buckets"><code>bucket</code></a> for <a href="https://github.com/lukesampson/scoop">Scoop</a>, providing lightweight, refined tools for seamless workflows.
     </p>
@@ -14,7 +15,7 @@
 
 | Manifest   | Description                                                            |
 | ---------- | ---------------------------------------------------------------------- |
-| AutoHotkey | Install `Ahk2Exe` by default and set `AHK_HOME` to the root directory. |
+| AutoHotkey | Install `Ahk2Exe` by default and set `AHK_HOME` to the root directory of `AutoHotkey`. |
 
 ## How to install the apps from this bucket?
 

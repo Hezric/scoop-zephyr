@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
     <h1 align="center">🎐Zephyr</h1>
     <p align="center">
         <a href="https://github.com/Hezric/scoop-zephyr/actions/workflows/ci.yml"><img src="https://github.com/Hezric/scoop-zephyr/actions/workflows/ci.yml/badge.svg" alt="GitHub Actions CI 状态"></a>
@@ -13,9 +13,10 @@
 
 ## 应用列表
 
-| 应用名称    | 描述                                                    |
-| ---------- | ------------------------------------------------------ |
-| AutoHotkey | 默认安装 `Ahk2Exe` 并自动设置指向 `AutoHotkey` 根目录的环境变量 `AHK_HOME`。        |
+| 应用名称   | 描述                                                                         |
+| ---------- | ---------------------------------------------------------------------------- |
+| AutoHotkey | 默认安装 `Ahk2Exe` 并自动设置指向 `AutoHotkey` 根目录的环境变量 `AHK_HOME`。 |
+| Bun        | 默认添加 `%USERPROFILE%\.bun\bin` 到环境变量。                         |
 
 ## 如何从此 bucket 安装应用？
 
@@ -35,3 +36,5 @@ scoop install zephyr/<应用名称>
 
 要贡献新的程序清单，请阅读 [贡献指南](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md)
 和 [应用清单](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests) wiki 页面。
+
+

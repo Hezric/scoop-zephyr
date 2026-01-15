@@ -13,9 +13,10 @@
 
 ## Apps
 
-| Manifest   | Description                                                            |
-| ---------- | ---------------------------------------------------------------------- |
+| Manifest   | Description                                                                            |
+| ---------- | -------------------------------------------------------------------------------------- |
 | AutoHotkey | Install `Ahk2Exe` by default and set `AHK_HOME` to the root directory of `AutoHotkey`. |
+| Bun        | Add `%USERPROFILE%\.bun\bin` to `PATH`.                                                |
 
 ## How to install the apps from this bucket?
 

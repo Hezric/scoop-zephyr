@@ -17,6 +17,8 @@
 | ---------- | -------------------------------------------------------------------------------------- |
 | AutoHotkey | Install `Ahk2Exe` by default and set `AHK_HOME` to the root directory of `AutoHotkey`. |
 | Bun        | Add `%USERPROFILE%\.bun\bin` to `PATH`.                                                |
+| Rulesync   | A standalone binary release of an AI agent configuration manager.                     |
+
 
 ## How to install the apps from this bucket?
 

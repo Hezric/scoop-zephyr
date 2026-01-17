@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
     <h1 align="center">🎐Zephyr</h1>
     <p align="center">
         <a href="https://github.com/Hezric/scoop-zephyr/actions/workflows/ci.yml"><img src="https://github.com/Hezric/scoop-zephyr/actions/workflows/ci.yml/badge.svg" alt="GitHub Actions CI 状态"></a>
@@ -16,7 +16,9 @@
 | 应用名称   | 描述                                                                         |
 | ---------- | ---------------------------------------------------------------------------- |
 | AutoHotkey | 默认安装 `Ahk2Exe` 并自动设置指向 `AutoHotkey` 根目录的环境变量 `AHK_HOME`。 |
-| Bun        | 默认添加 `%USERPROFILE%\.bun\bin` 到环境变量。                         |
+| Bun        | 默认添加 `%USERPROFILE%\.bun\bin` 到环境变量。                             |
+| Rulesync   | 一个 AI Agent 配置管理程序的独立二进制版本。                                       |
+
 
 ## 如何从此 bucket 安装应用？
 

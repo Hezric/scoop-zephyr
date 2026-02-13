@@ -16,7 +16,6 @@
 | Manifest   | Description                                                                            |
 | ---------- | -------------------------------------------------------------------------------------- |
 | AutoHotkey | Install `Ahk2Exe` by default and set `AHK_HOME` to the root directory of `AutoHotkey`. |
-| Rulesync   | A standalone binary release of an AI agent configuration manager.                     |
 
 
 ## How to install the apps from this bucket?

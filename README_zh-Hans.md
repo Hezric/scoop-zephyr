@@ -7,15 +7,16 @@
     </p>
     <p align="center"><a href="README.md">English</a> | 简体中文</p>
     <p align="center">
-        一个 <a href="https://github.com/lukesampson/scoop">Scoop</a> 的 <a href="https://github.com/lukesampson/scoop/wiki/Buckets"><code>bucket</code></a>，带来为流畅工作流而生的轻量工具。
+        一个 <a href="https://github.com/lukesampson/scoop">Scoop</a> 的 <a href="https://github.com/lukesampson/scoop/wiki/Buckets"><code>bucket</code></a>，为带来为流畅工作流而生。
     </p>
 </div>
 
 ## 应用列表
 
-| 应用名称   | 描述                                                                         |
-| ---------- | ---------------------------------------------------------------------------- |
-| AutoHotkey | 默认安装 `Ahk2Exe` 并自动设置指向 `AutoHotkey` 根目录的环境变量 `AHK_HOME`。 |
+| 应用名称 | 描述 | 官方链接 |
+| -------- | ---- | -------- |
+| `AutoHotkey` | 默认安装 `Ahk2Exe` 并自动设置指向 `AutoHotkey` 根目录的环境变量 `AHK_HOME`。 | [GitHub](https://github.com/AutoHotkey/AutoHotkey) |
+| `codex-acp` | 适用于 Windows 的 `Codex` ACP 适配器，可用于 `Zed` 等兼容 `ACP` 的客户端。 | [GitHub](https://github.com/zed-industries/codex-acp) |
 
 
 ## 如何从此 bucket 安装应用？

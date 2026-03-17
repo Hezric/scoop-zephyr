@@ -1,0 +1,35 @@
+{
+    "version": "0.10.0",
+    "description": "ACP adapter for Codex for use with ACP-compatible clients such as Zed.",
+    "homepage": "https://github.com/zed-industries/codex-acp",
+    "license": "Apache-2.0",
+    "notes": [
+        "Provide one of these before running `codex-acp`: `OPENAI_API_KEY`, `CODEX_API_KEY`, or a supported ChatGPT subscription login.",
+        "Example: `OPENAI_API_KEY=sk-... codex-acp`"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zed-industries/codex-acp/releases/download/v0.10.0/codex-acp-0.10.0-x86_64-pc-windows-msvc.zip",
+            "hash": "197a4daf5c163f3b491b19073c18d7177d67bf5179212811caa5f88b3e92d93e"
+        },
+        "arm64": {
+            "url": "https://github.com/zed-industries/codex-acp/releases/download/v0.10.0/codex-acp-0.10.0-aarch64-pc-windows-msvc.zip",
+            "hash": "9ed9af77c6fd6458149fd328f7e4b007691d8cf973aac3737c47b9fdbf1a9780"
+        }
+    },
+    "bin": "codex-acp.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/zed-industries/codex-acp/releases/latest",
+        "regex": "\\\"tag_name\\\":\\s*\\\"v([\\d.]+)\\\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zed-industries/codex-acp/releases/download/v$version/codex-acp-$version-x86_64-pc-windows-msvc.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/zed-industries/codex-acp/releases/download/v$version/codex-acp-$version-aarch64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

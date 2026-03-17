@@ -13,9 +13,10 @@
 
 ## Apps
 
-| Manifest   | Description                                                                            |
-| ---------- | -------------------------------------------------------------------------------------- |
-| AutoHotkey | Install `Ahk2Exe` by default and set `AHK_HOME` to the root directory of `AutoHotkey`. |
+| Manifest | Description | Official |
+| -------- | ----------- | -------- |
+| `AutoHotkey` | Install `Ahk2Exe` by default and set `AHK_HOME` to the root directory of `AutoHotkey`. | [GitHub](https://github.com/AutoHotkey/AutoHotkey) |
+| `codex-acp` | ACP adapter for `Codex`, packaged for `ACP-compatible` clients such as `Zed` on Windows. | [GitHub](https://github.com/zed-industries/codex-acp) |
 
 
 ## How to install the apps from this bucket?

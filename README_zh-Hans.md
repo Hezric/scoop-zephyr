@@ -17,6 +17,7 @@
 | -------- | ---- | -------- |
 | `AutoHotkey` | 默认安装 `Ahk2Exe` 并自动设置指向 `AutoHotkey` 根目录的环境变量 `AHK_HOME`。 | [GitHub](https://github.com/AutoHotkey/AutoHotkey) |
 | `codex-acp` | 适用于 Windows 的 `Codex` ACP 适配器，可用于 `Zed` 等兼容 `ACP` 的客户端。 | [GitHub](https://github.com/zed-industries/codex-acp) |
+| `cua-driver` | 面向 `Cua` 的跨平台桌面自动化驱动程序。 | [GitHub](https://github.com/trycua/cua) |
 
 
 ## 如何从此 bucket 安装应用？

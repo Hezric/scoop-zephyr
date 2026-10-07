@@ -1,17 +1,32 @@
+name: Excavator
+
 on:
   workflow_dispatch:
   schedule:
     # run every 4 hours
     - cron: '20 */4 * * *'
-name: Excavator
+
+permissions:
+  contents: write
+
 jobs:
   excavate:
     name: Excavate
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@main
-      - name: Excavate
-        uses: ScoopInstaller/GithubActions@main
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check and update manifests
+        shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SKIP_UPDATED: 1
+        run: |
+          #requires -Version 7.0
+          $ErrorActionPreference = 'Stop'
+          & "$env:GITHUB_WORKSPACE\.github\scripts\test-excavator.ps1"
+          $env:SCOOP = Join-Path $env:USERPROFILE 'scoop'
+          $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
+          Invoke-RestMethod 'https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1' | Invoke-Expression
+          & (Join-Path $env:SCOOP_HOME 'bin\checkver.ps1') -Dir (Join-Path $env:GITHUB_WORKSPACE 'bucket') -Update -SkipUpdated -ThrowError
+          & "$env:GITHUB_WORKSPACE\.github\scripts\excavator.ps1"

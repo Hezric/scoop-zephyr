@@ -24,4 +24,4 @@ $pesterConfig = New-PesterConfiguration -Hashtable @{
     }
 }
 $result = Invoke-Pester -Configuration $pesterConfig
-exit $result.FailedCount
+if ($result.Result -ne 'Passed') { throw 'Scoop bucket tests failed.' }

@@ -17,7 +17,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Check and update manifests
+      - name: Init Test Suite
+        uses: potatoqualitee/psmodulecache@main
+        with:
+          modules-to-cache: BuildHelpers, Pester
+          shell: pwsh
+      - name: Check, test and publish manifests
         shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -29,4 +34,11 @@ jobs:
           $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
           Invoke-RestMethod 'https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1' | Invoke-Expression
           & (Join-Path $env:SCOOP_HOME 'bin\checkver.ps1') -Dir (Join-Path $env:GITHUB_WORKSPACE 'bucket') -Update -SkipUpdated -ThrowError
+          # Scoop's CI filter only considers committed changes; test the updated working tree.
+          $env:CI = 'false'
+          & pwsh -NoProfile -File "$env:GITHUB_WORKSPACE\bin\test.ps1"
+          if ($LASTEXITCODE -ne 0) { throw 'Manifest tests failed; no updates were published.' }
+          # The shared test runner removes this tracked file.
+          & git restore -- .markdownlint.json
+          if ($LASTEXITCODE -ne 0) { throw 'Could not restore the test runner cleanup.' }
           & "$env:GITHUB_WORKSPACE\.github\scripts\excavator.ps1"
